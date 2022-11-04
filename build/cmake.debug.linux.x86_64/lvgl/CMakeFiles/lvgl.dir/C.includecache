@@ -2512,6 +2512,18 @@ qrcodegen.h
 ../../../lvgl.h
 /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/lvgl.h
 
+/home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/extra/libs/qrcode/qrcodegen.c
+assert.h
+-
+limits.h
+-
+stdlib.h
+-
+string.h
+-
+qrcodegen.h
+/home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/extra/libs/qrcode/qrcodegen.h
+
 /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/extra/libs/qrcode/qrcodegen.h
 stdbool.h
 -
@@ -2557,6 +2569,10 @@ stdint.h
 -
 
 /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/extra/libs/sjpg/tjpgdcnf.h
+
+/home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/extra/lv_extra.c
+../lvgl.h
+/home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/lvgl.h
 
 /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/extra/lv_extra.h
 layouts/lv_layouts.h
@@ -3660,6 +3676,8 @@ lv_style.h
 
 /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/misc/lv_style_gen.h
 
+/home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/misc/lv_templ.c
+
 /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/misc/lv_timer.c
 lv_timer.h
 /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/misc/lv_timer.h
@@ -3767,6 +3785,12 @@ lv_txt.h
 /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/misc/lv_types.h
 stdint.h
 -
+
+/home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/misc/lv_utils.c
+stddef.h
+-
+lv_utils.h
+/home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/misc/lv_utils.h
 
 /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/misc/lv_utils.h
 stdint.h
@@ -4013,6 +4037,8 @@ string.h
 /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/lv_conf_internal.h
 ../core/lv_obj.h
 /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/core/lv_obj.h
+
+/home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/widgets/lv_objx_templ.c
 
 /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/src/widgets/lv_roller.c
 lv_roller.h

@@ -3,15 +3,15 @@
 
 # compile C with /usr/bin/cc
 # compile CXX with /usr/bin/c++
-C_FLAGS =  
+C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = -DLV_CONF_INCLUDE_SIMPLE -DLV_LVGL_H_INCLUDE_SIMPLE
 
-C_INCLUDES = -I/home/hamza/eclipse-workspace/lvgl_test_cmake/. -isystem /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl -isystem /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/examples -isystem /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/demos -isystem /home/hamza/eclipse-workspace/lvgl_test_cmake/lv_drivers 
+C_INCLUDES = -I/usr/include/SDL2 -I/home/hamza/eclipse-workspace/lvgl_test_cmake -I/home/hamza/eclipse-workspace/lvgl_test_cmake/. -isystem /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl -isystem /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/examples -isystem /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/demos -isystem /home/hamza/eclipse-workspace/lvgl_test_cmake/lv_drivers 
 
-CXX_FLAGS =  
+CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = -DLV_CONF_INCLUDE_SIMPLE -DLV_LVGL_H_INCLUDE_SIMPLE
 
-CXX_INCLUDES = -I/home/hamza/eclipse-workspace/lvgl_test_cmake/. -isystem /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl -isystem /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/examples -isystem /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/demos -isystem /home/hamza/eclipse-workspace/lvgl_test_cmake/lv_drivers 
+CXX_INCLUDES = -I/usr/include/SDL2 -I/home/hamza/eclipse-workspace/lvgl_test_cmake -I/home/hamza/eclipse-workspace/lvgl_test_cmake/. -isystem /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl -isystem /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/examples -isystem /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/demos -isystem /home/hamza/eclipse-workspace/lvgl_test_cmake/lv_drivers 
 

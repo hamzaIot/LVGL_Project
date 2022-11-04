@@ -53134,6 +53134,8 @@ CMakeFiles/lvgl_fb.dir/main.cpp.o
  /home/hamza/eclipse-workspace/lvgl_test_cmake/lv_conf.h
  /home/hamza/eclipse-workspace/lvgl_test_cmake/lv_drivers/display/fbdev.h
  /home/hamza/eclipse-workspace/lvgl_test_cmake/lv_drivers/indev/evdev.h
+ /home/hamza/eclipse-workspace/lvgl_test_cmake/lv_drivers/sdl/sdl.h
+ /home/hamza/eclipse-workspace/lvgl_test_cmake/lv_drivers/sdl/sdl_common.h
  /home/hamza/eclipse-workspace/lvgl_test_cmake/lv_drv_conf.h
  /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/demos/benchmark/lv_demo_benchmark.h
  /home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/demos/keypad_encoder/lv_demo_keypad_encoder.h

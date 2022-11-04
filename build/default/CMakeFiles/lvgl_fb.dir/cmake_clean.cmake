@@ -472,6 +472,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/lvgl_fb.dir/lvgl/tests/unity/unity_support.c.o"
   "CMakeFiles/lvgl_fb.dir/main.cpp.o"
   "CMakeFiles/lvgl_fb.dir/print_pierre.cpp.o"
+  "CMakeFiles/lvgl_fb.dir/ui/ui.c.o"
+  "CMakeFiles/lvgl_fb.dir/ui/ui_events.cpp.o"
   "lvgl_fb"
   "lvgl_fb.pdb"
 )

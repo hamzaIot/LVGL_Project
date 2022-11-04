@@ -3,72 +3,51 @@
 #include "lv_drivers/display/fbdev.h"
 #include "lv_drivers/indev/evdev.h"
 #include <unistd.h>
+#define SDL_MAIN_HANDLED /*To fix SDL's "undefined reference to WinMain" issue*/
+#include <SDL2/SDL.h>
 #include <pthread.h>
 #include <time.h>
 #include <sys/time.h>
 #include "print_pierre.h"
 #include "ui/ui.h"
-
-// sdl
-#define SDL_MAIN_HANDLED /*To fix SDL's "undefined reference to WinMain" issue*/
-
-//#include <SDL2/SDL.h>
-//#include "lv_drivers/sdl/sdl.h"
+#include "lv_drivers/sdl/sdl.h"
 
 
 #define DISP_BUF_SIZE (128 * 1024)
 
 static void hal_init(void);
-//static void hal_init2(void);
-
-
-int main(void)
-{
-    /*LittlevGL init*/
-    lv_init();
-    hal_init();
-    ui_init();
+static void hal_init2(void);
 
 
 
-    //print_pierre();
-
-    /*Handle LitlevGL tasks (tickless mode)*/
-    while(1) {
-        lv_timer_handler();
-        usleep(5000);
-    }
-
-    return 0;
-}
 
 //SDL
-//static void hal_init2(void)
-//{
+static void hal_init2(void)
+{
    /* Use the 'monitor' driver which creates window on PC's monitor to simulate a display*/
-//    sdl_init();
+    sdl_init();
 
    /*Create a display buffer*/
-//    static lv_color_t buf[SDL_HOR_RES * SDL_VER_RES];
-//    static lv_disp_draw_buf_t disp_draw_buf;
-//    lv_disp_draw_buf_init(&disp_draw_buf, buf, NULL, SDL_HOR_RES * SDL_VER_RES);
+    static lv_color_t buf[SDL_HOR_RES * SDL_VER_RES];
+    static lv_disp_draw_buf_t disp_draw_buf;
+    lv_disp_draw_buf_init(&disp_draw_buf, buf, NULL, SDL_HOR_RES * SDL_VER_RES);
 
    /*Create a display*/
-//    static lv_disp_drv_t disp_drv;
-//    lv_disp_drv_init(&disp_drv); /*Basic initialization*/
-//    disp_drv.draw_buf = &disp_draw_buf;
-//    disp_drv.flush_cb = sdl_display_flush;
-//   disp_drv.hor_res = SDL_HOR_RES;
-//    disp_drv.ver_res = SDL_VER_RES;
-//    lv_disp_drv_register(&disp_drv);
+    static lv_disp_drv_t disp_drv;
+    lv_disp_drv_init(&disp_drv); /*Basic initialization*/
+    disp_drv.draw_buf = &disp_draw_buf;
+    disp_drv.flush_cb = sdl_display_flush;
+   disp_drv.hor_res = SDL_HOR_RES;
+    disp_drv.ver_res = SDL_VER_RES;
+    lv_disp_drv_register(&disp_drv);
 
     /* Add a mouse as input device */
-//    static lv_indev_drv_t indev_drv;
-//    lv_indev_drv_init(&indev_drv); /*Basic initialization*/
-//    indev_drv.type = LV_INDEV_TYPE_POINTER;
-//    indev_drv.read_cb = sdl_mouse_read;
-//   lv_indev_drv_register(&indev_drv);
-//}
+    static lv_indev_drv_t indev_drv;
+    lv_indev_drv_init(&indev_drv); /*Basic initialization*/
+    indev_drv.type = LV_INDEV_TYPE_POINTER;
+    indev_drv.read_cb = sdl_mouse_read;
+   lv_indev_drv_register(&indev_drv);
+}
 
 
 
@@ -111,28 +90,6 @@ static void hal_init(void)
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Set in lv_conf.h as `LV_TICK_CUSTOM_SYS_TIME_EXPR`*/
 uint32_t custom_tick_get(void)
 {
@@ -151,3 +108,30 @@ uint32_t custom_tick_get(void)
     uint32_t time_ms = now_ms - start_ms;
     return time_ms;
 }
+
+
+
+int main(void)
+{
+    /*LittlevGL init*/
+    lv_init();
+    hal_init2();
+    ui_init();
+
+#ifdef TOTO
+    print("coucou");
+#endif
+
+
+
+    //print_pierre();
+
+    /*Handle LitlevGL tasks (tickless mode)*/
+    while(1) {
+        lv_timer_handler();
+        usleep(5000);
+    }
+
+    return 0;
+}
+

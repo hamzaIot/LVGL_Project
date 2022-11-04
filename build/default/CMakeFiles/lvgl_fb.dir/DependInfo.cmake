@@ -476,6 +476,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/tests/src/test_fonts/font_3.c" "/home/hamza/eclipse-workspace/lvgl_test_cmake/build/default/CMakeFiles/lvgl_fb.dir/lvgl/tests/src/test_fonts/font_3.c.o"
   "/home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/tests/unity/unity.c" "/home/hamza/eclipse-workspace/lvgl_test_cmake/build/default/CMakeFiles/lvgl_fb.dir/lvgl/tests/unity/unity.c.o"
   "/home/hamza/eclipse-workspace/lvgl_test_cmake/lvgl/tests/unity/unity_support.c" "/home/hamza/eclipse-workspace/lvgl_test_cmake/build/default/CMakeFiles/lvgl_fb.dir/lvgl/tests/unity/unity_support.c.o"
+  "/home/hamza/eclipse-workspace/lvgl_test_cmake/ui/ui.c" "/home/hamza/eclipse-workspace/lvgl_test_cmake/build/default/CMakeFiles/lvgl_fb.dir/ui/ui.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -487,6 +488,8 @@ set(CMAKE_TARGET_DEFINITIONS_C
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/SDL2"
+  "../../"
   "../../."
   "../../lvgl"
   "../../lvgl/examples"
@@ -496,6 +499,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/hamza/eclipse-workspace/lvgl_test_cmake/main.cpp" "/home/hamza/eclipse-workspace/lvgl_test_cmake/build/default/CMakeFiles/lvgl_fb.dir/main.cpp.o"
   "/home/hamza/eclipse-workspace/lvgl_test_cmake/print_pierre.cpp" "/home/hamza/eclipse-workspace/lvgl_test_cmake/build/default/CMakeFiles/lvgl_fb.dir/print_pierre.cpp.o"
+  "/home/hamza/eclipse-workspace/lvgl_test_cmake/ui/ui_events.cpp" "/home/hamza/eclipse-workspace/lvgl_test_cmake/build/default/CMakeFiles/lvgl_fb.dir/ui/ui_events.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -507,6 +511,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/include/SDL2"
+  "../../"
   "../../."
   "../../lvgl"
   "../../lvgl/examples"

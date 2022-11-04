@@ -12992,6 +12992,60 @@ print_pierre.cpp.s:
 	$(MAKE) -f CMakeFiles/lvgl_fb.dir/build.make CMakeFiles/lvgl_fb.dir/print_pierre.cpp.s
 .PHONY : print_pierre.cpp.s
 
+ui/ui.o: ui/ui.c.o
+
+.PHONY : ui/ui.o
+
+# target to build an object file
+ui/ui.c.o:
+	$(MAKE) -f CMakeFiles/lvgl_fb.dir/build.make CMakeFiles/lvgl_fb.dir/ui/ui.c.o
+.PHONY : ui/ui.c.o
+
+ui/ui.i: ui/ui.c.i
+
+.PHONY : ui/ui.i
+
+# target to preprocess a source file
+ui/ui.c.i:
+	$(MAKE) -f CMakeFiles/lvgl_fb.dir/build.make CMakeFiles/lvgl_fb.dir/ui/ui.c.i
+.PHONY : ui/ui.c.i
+
+ui/ui.s: ui/ui.c.s
+
+.PHONY : ui/ui.s
+
+# target to generate assembly for a file
+ui/ui.c.s:
+	$(MAKE) -f CMakeFiles/lvgl_fb.dir/build.make CMakeFiles/lvgl_fb.dir/ui/ui.c.s
+.PHONY : ui/ui.c.s
+
+ui/ui_events.o: ui/ui_events.cpp.o
+
+.PHONY : ui/ui_events.o
+
+# target to build an object file
+ui/ui_events.cpp.o:
+	$(MAKE) -f CMakeFiles/lvgl_fb.dir/build.make CMakeFiles/lvgl_fb.dir/ui/ui_events.cpp.o
+.PHONY : ui/ui_events.cpp.o
+
+ui/ui_events.i: ui/ui_events.cpp.i
+
+.PHONY : ui/ui_events.i
+
+# target to preprocess a source file
+ui/ui_events.cpp.i:
+	$(MAKE) -f CMakeFiles/lvgl_fb.dir/build.make CMakeFiles/lvgl_fb.dir/ui/ui_events.cpp.i
+.PHONY : ui/ui_events.cpp.i
+
+ui/ui_events.s: ui/ui_events.cpp.s
+
+.PHONY : ui/ui_events.s
+
+# target to generate assembly for a file
+ui/ui_events.cpp.s:
+	$(MAKE) -f CMakeFiles/lvgl_fb.dir/build.make CMakeFiles/lvgl_fb.dir/ui/ui_events.cpp.s
+.PHONY : ui/ui_events.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -14428,6 +14482,12 @@ help:
 	@echo "... print_pierre.o"
 	@echo "... print_pierre.i"
 	@echo "... print_pierre.s"
+	@echo "... ui/ui.o"
+	@echo "... ui/ui.i"
+	@echo "... ui/ui.s"
+	@echo "... ui/ui_events.o"
+	@echo "... ui/ui_events.i"
+	@echo "... ui/ui_events.s"
 .PHONY : help
 
 

@@ -200,6 +200,8 @@ set(CMAKE_TARGET_DEFINITIONS_C
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/SDL2"
+  "../../"
   "../../."
   "../../lvgl"
   )

@@ -116,9 +116,9 @@ lvgl/clean: lvgl/CMakeFiles/lvgl.dir/clean
 # Target rules for target CMakeFiles/lvgl_fb.dir
 
 # All Build rule for target.
-CMakeFiles/lvgl_fb.dir/all: lvgl/CMakeFiles/lvgl_demos.dir/all
-CMakeFiles/lvgl_fb.dir/all: lvgl/CMakeFiles/lvgl_examples.dir/all
 CMakeFiles/lvgl_fb.dir/all: lvgl/CMakeFiles/lvgl.dir/all
+CMakeFiles/lvgl_fb.dir/all: lvgl/CMakeFiles/lvgl_examples.dir/all
+CMakeFiles/lvgl_fb.dir/all: lvgl/CMakeFiles/lvgl_demos.dir/all
 CMakeFiles/lvgl_fb.dir/all: lv_drivers/CMakeFiles/lv_drivers.dir/all
 	$(MAKE) -f CMakeFiles/lvgl_fb.dir/build.make CMakeFiles/lvgl_fb.dir/depend
 	$(MAKE) -f CMakeFiles/lvgl_fb.dir/build.make CMakeFiles/lvgl_fb.dir/build

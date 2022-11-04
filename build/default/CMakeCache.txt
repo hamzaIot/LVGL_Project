@@ -224,6 +224,9 @@ LV_LVGL_H_INCLUDE_SIMPLE:BOOL=ON
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
+//The directory containing a CMake configuration file for SDL2.
+SDL2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SDL2
+
 //Value Computed by CMake
 lv_drivers_BINARY_DIR:STATIC=/home/hamza/eclipse-workspace/lvgl_test_cmake/build/default/lv_drivers
 
