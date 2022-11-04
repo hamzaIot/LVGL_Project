@@ -10,7 +10,7 @@ LOCAL_SDL
 
 if(${TARGET_CONFIG} STREQUAL LOCAL_SDL)
 	message("CMAKE for SDL")
-	list(APPEND FLAG TOTO)
+	list(APPEND FLAG USE_SDL_FLAG_FROM_CMAKE_LIST)
 
 	find_package(SDL2 REQUIRED SDL2)
 	include_directories(
@@ -45,10 +45,12 @@ file(GLOB_RECURSE INCLUDES "lv_drivers/*.h" "ui/ui.h" "ui/ui_helpers.h" "lvgl/*.
 file(GLOB_RECURSE SOURCES  "lv_drivers/*.c" "ui/ui.c" "ui/ui.helpers.c" "lvgl/*.c" "ui/ui_events.cpp" "print_pierre.cpp") # ${SOURCES}
 
 
-
-
-
-
-
 add_executable(${PROJECT_NAME} main.cpp ${INCLUDES}  ${SOURCES})
 target_link_libraries(${PROJECT_NAME} PRIVATE lvgl lvgl::examples lvgl::demos lvgl::drivers ${SDL2_LIBRARIES})
+target_compile_definitions(${PROJECT_NAME} PUBLIC ${FLAG})
+
+
+
+
+
+
