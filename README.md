@@ -1,8 +1,6 @@
-# LVGL for frame buffer device
+# LVGL for frame buffer on raspberry Pi and waveshare LCD 4inch 720x720 
 
-LVGL configured to work with /dev/fb0 on Linux.
+LVGL configured to work with /dev/fb0 on raspberry Pi and waveshare screen .
 
 When cloning this repository, also make sure to download submodules (`git submodule update --init --recursive`) otherwise you will be missing key components.
 
-Check out this blog post for a step by step tutorial:
-https://blog.lvgl.io/2018-01-03/linux_fb
