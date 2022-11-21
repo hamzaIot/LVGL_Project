@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DLV_CONF_INCLUDE_SIMPLE -DLV_LVGL_H_INCLUDE_SIMPLE
 
-C_INCLUDES = -I/usr/include/SDL2 -I/home/pierre/eclipse-workspace/LVGL_Project -I/home/pierre/eclipse-workspace/LVGL_Project/. -isystem /home/pierre/eclipse-workspace/LVGL_Project/lvgl/demos -isystem /home/pierre/eclipse-workspace/LVGL_Project/lvgl
+C_INCLUDES = -I/home/pierre/eclipse-workspace/LVGL_Project/. -isystem /home/pierre/eclipse-workspace/LVGL_Project/lvgl/demos -isystem /home/pierre/eclipse-workspace/LVGL_Project/lvgl
 
 C_FLAGS = -std=gnu11
 

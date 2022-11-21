@@ -4,8 +4,8 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 11)
 
 set(TARGET_CONFIG
-#TARGET_RPI
-LOCAL_SDL
+TARGET_RPI
+#LOCAL_SDL
 )
 
 if(${TARGET_CONFIG} STREQUAL LOCAL_SDL)
@@ -18,6 +18,8 @@ if(${TARGET_CONFIG} STREQUAL LOCAL_SDL)
         	${SDL2_INCLUDE_DIRS}/../
         	${PROJECT_SOURCE_DIR}
 	)
+	
+	list(APPEND LIBS lvgl lvgl::examples lvgl::demos lvgl::drivers ${SDL2_LIBRARIES})
 endif()
 
 
@@ -29,6 +31,7 @@ set(CMAKE_BUILD_TYPE Debug)
 
 if(${TARGET_CONFIG} STREQUAL TARGET_RPI)
 	message("CMAKE for RPI")
+	list(APPEND FLAG RPI)
 
 	#which compilers to use for C and C++
 	set(CMAKE_C_COMPILER   arm-linux-gnueabihf-gcc)
@@ -37,6 +40,8 @@ if(${TARGET_CONFIG} STREQUAL TARGET_RPI)
 	#where is the target environment located
 	set(CMAKE_FIND_ROOT_PATH  "/usr/bin")
 
+	list(APPEND LIBS lvgl lvgl::examples lvgl::demos lvgl::drivers)
+	
 endif()
 
 
@@ -46,8 +51,9 @@ file(GLOB_RECURSE SOURCES  "lv_drivers/*.c" "ui/ui.c" "ui/ui.helpers.c" "lvgl/*.
 
 
 add_executable(${PROJECT_NAME} main.cpp ${INCLUDES}  ${SOURCES})
-target_link_libraries(${PROJECT_NAME} PRIVATE lvgl lvgl::examples lvgl::demos lvgl::drivers ${SDL2_LIBRARIES})
-target_compile_definitions(${PROJECT_NAME} PUBLIC ${FLAG})
+
+target_link_libraries(${PROJECT_NAME} PRIVATE ${LIBS})
+target_compile_definitions(${PROJECT_NAME} PRIVATE ${FLAG})
 
 
 
